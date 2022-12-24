@@ -73,7 +73,7 @@ const handleSubmit = async (e) => {
   const messageDiv = document.getElementById(uniqueId);
 
   loader(messageDiv);
-  const response = await fetch('https://codex-im0y.onrender.com/', {
+  const response = await fetch('https://rejaul-karim-codex.onrender.com', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
