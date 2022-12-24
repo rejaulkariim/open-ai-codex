@@ -21,12 +21,19 @@ function loader(element) {
 function typeText(element, text) {
   let index = 0;
 
-  let interval = setInterval(()=>{
-    if(index <text.length){
+  let interval = setInterval(() => {
+    if (index < text.length) {
       element.innerHTML += text.chartAt(index);
-      index++
-    }else{
-      clearInterval(interval)
+      index++;
+    } else {
+      clearInterval(interval);
     }
-  },20)
+  }, 20);
+}
+
+function generateUniqueId() {
+  const timeStamp = date.now();
+  const randomNumber = Math.random();
+  const hexadecimalString = randomNumber.toString(16);
+  return `id-${timeStamp}-${hexadecimalString}`;
 }
